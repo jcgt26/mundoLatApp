@@ -1,4 +1,4 @@
-package com.mundo_latino.model.product;
+package com.mundo_latino.product;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

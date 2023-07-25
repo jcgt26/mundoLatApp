@@ -1,4 +1,4 @@
-package com.mundo_latino.model.contact;
+package com.mundo_latino.contact;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

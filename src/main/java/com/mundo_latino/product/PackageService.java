@@ -1,4 +1,4 @@
-package com.mundo_latino.model.product;
+package com.mundo_latino.product;
 
 import org.springframework.stereotype.Service;
 

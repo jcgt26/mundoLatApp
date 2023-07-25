@@ -1,4 +1,4 @@
-package com.mundo_latino.model.location;
+package com.mundo_latino.location;
 
 import org.springframework.stereotype.Service;
 

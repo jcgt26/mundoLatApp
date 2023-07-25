@@ -1,4 +1,4 @@
-package com.mundo_latino.model.contact;
+package com.mundo_latino.contact;
 
 import jakarta.persistence.*;
 

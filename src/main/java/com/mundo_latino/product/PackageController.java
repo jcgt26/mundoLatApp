@@ -1,9 +1,9 @@
-package com.mundo_latino.model.user;
+package com.mundo_latino.product;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/v1/user")
-public class UserController {
+@RequestMapping("api/v1/packages")
+public class PackageController {
 }

@@ -1,4 +1,4 @@
-package com.mundo_latino.model.user;
+package com.mundo_latino.user;
 
 import org.springframework.stereotype.Service;
 
