@@ -1,15 +1,21 @@
 package com.mundo_latino.model.contact;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
 @Table
 public class Contact {
+    @SequenceGenerator(
+            name="contact_seq",
+            sequenceName = "contact_seq",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "contact_seq"
+    )
     @Id
     private Long id;
     @Column
