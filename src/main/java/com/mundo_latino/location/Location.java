@@ -1,15 +1,22 @@
 package com.mundo_latino.location;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
 @Table
 public class Location {
+    @SequenceGenerator(
+            name="location_seq",
+            sequenceName = "location_seq",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "location_seq"
+    )
+
     @Id
     private Long id;
     @Column

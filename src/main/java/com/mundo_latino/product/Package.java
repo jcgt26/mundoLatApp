@@ -1,15 +1,21 @@
 package com.mundo_latino.product;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
 @Table
 public class Package {
+    @SequenceGenerator(
+            name="package_seq",
+            sequenceName = "package_seq",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "package_seq"
+    )
     @Id
     private Long id;
     @Column

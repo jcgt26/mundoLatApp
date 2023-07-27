@@ -1,16 +1,21 @@
 package com.mundo_latino.address;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
 @Table
 public class Address {
-
+    @SequenceGenerator(
+            name="address_seq",
+            sequenceName = "address_seq",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "address_seq"
+    )
     @Id
     private Long id;
     @Column

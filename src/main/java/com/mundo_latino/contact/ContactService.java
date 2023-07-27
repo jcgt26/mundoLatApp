@@ -1,19 +1,20 @@
 package com.mundo_latino.contact;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class ContactService {
-    public List<Contact> getContacts() {
-        return List.of(
-                new Contact(
-                        2L,
-                        2L,
-                        3L,
-                        "32323233232"
+    private final ContactRepository contactRepository;
 
-                )
-        );
+    @Autowired
+    public ContactService(ContactRepository contactRepository) {
+        this.contactRepository = contactRepository;
+    }
+
+    public List<Contact> getContacts() {
+        return contactRepository.findAll();
     }
 }
