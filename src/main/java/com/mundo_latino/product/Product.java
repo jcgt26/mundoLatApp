@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table
-public class Package {
+public class Product {
     @SequenceGenerator(
             name="package_seq",
             sequenceName = "package_seq",
@@ -31,7 +31,7 @@ public class Package {
     @Column
     private Date updatedAt;
 
-    public Package(Long id,Long customerId, Long externalId, Short status, Long locationId) {
+    public Product(Long id, Long customerId, Long externalId, Short status, Long locationId) {
         this.id = id;
         this.customerId = customerId;
         this.externalId = externalId;
@@ -41,7 +41,7 @@ public class Package {
         this.updatedAt = new Date();
     }
 
-    public Package() {
+    public Product() {
 
     }
 

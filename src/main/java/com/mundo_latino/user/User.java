@@ -8,7 +8,7 @@ import java.util.Date;
 @Table
 public class User {
     @SequenceGenerator(
-            name="user_seq",
+            name = "user_seq",
             sequenceName = "user_seq",
             allocationSize = 1
     )
@@ -25,15 +25,21 @@ public class User {
     @Column
     protected String email;
     @Column
+    protected String password;
+    @Column
+    Integer role;
+    @Column
     protected Date createdAt;
     @Column
     protected Date updatedAt;
 
-    public User(Long id, String firstName, String lastName, String email) {
+    public User(Long id, String firstName, String lastName, String email, String password, Integer role) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.password = password;
+        this.role = role;
         this.createdAt = new Date();
         this.updatedAt = new Date();
     }
@@ -91,5 +97,13 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
