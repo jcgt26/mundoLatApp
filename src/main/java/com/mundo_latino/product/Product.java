@@ -19,6 +19,8 @@ public class Product {
     @Id
     private Long id;
     @Column
+    private String name;
+    @Column
     private Long customerId;
     @Column
     private Long externalId;
@@ -27,12 +29,15 @@ public class Product {
     @Column
     private Long locationId;
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
-    public Product(Long id, Long customerId, Long externalId, Short status, Long locationId) {
+    public Product(Long id, String name, Long customerId, Long externalId, Short status, Long locationId) {
         this.id = id;
+        this.name = name;
         this.customerId = customerId;
         this.externalId = externalId;
         this.status = status;
@@ -111,5 +116,13 @@ public class Product {
 
     public void setLocationId(Long locationId) {
         this.locationId = locationId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

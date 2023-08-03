@@ -22,8 +22,10 @@ public class Location {
     @Column
     private String name;
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
     public Location(long id, String name) {

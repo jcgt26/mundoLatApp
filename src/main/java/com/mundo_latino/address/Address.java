@@ -1,6 +1,7 @@
 package com.mundo_latino.address;
 
 import jakarta.persistence.*;
+import org.hibernate.boot.model.source.spi.IdentifierSource;
 
 import java.util.Date;
 
@@ -23,8 +24,10 @@ public class Address {
     @Column
     private Integer postalCode;
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
     public Address(Long id, String name, Integer postalCode) {

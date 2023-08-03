@@ -25,8 +25,10 @@ public class Contact {
     @Column
     private String phoneNumber;
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
     public Contact(Long id, Long customerId, Long addressId, String phoneNumber) {
